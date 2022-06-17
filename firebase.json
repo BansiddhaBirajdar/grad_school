@@ -1,10 +1,22 @@
 {
-  "hosting": {
-    "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
-  }
+  "hosting": [
+    {
+      "target": "production",
+      "public": "public",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+      
+    },
+    {
+      "target": "devenv",
+      "public": "public",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+     
+    },
+    {
+      "target": "staging",
+      "public": "public",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+      
+    }
+  ]
 }
