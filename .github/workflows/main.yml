@@ -23,13 +23,13 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@main
+      - uses: actions/checkout@staging
 
       # Runs a single command using the runners shell
       #- name: Install dependencies
       #  run: npm ci
       - name: Archive production artifact
-        uses: actions/upload-artifact@staging
+        uses: actions/upload-artifact@main
         with:
           name: public
           path: public
@@ -39,9 +39,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repository
-        uses: actions/checkout@main
+        uses: actions/checkout@staging
       - name: Archive production artifact
-        uses: actions/download-artifact@staging
+        uses: actions/download-artifact@main
         with:
           name: public
           path: public
