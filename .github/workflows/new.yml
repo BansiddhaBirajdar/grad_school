@@ -15,5 +15,5 @@ jobs:
       env:
         FIREBASE_TOKEN: ${{secrets.FIREBASE_TOKEN}}
         FIREBASE_PROJECT: master-73998
-        TARGET_BRANCH: main
+        TARGET_BRANCH: master
         FIREBASE_PROJECT_PATH: public
