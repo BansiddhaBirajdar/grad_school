@@ -1,22 +1,27 @@
-name: CI/CD
-
+name: Build and Deploy Api
 on:
   push:
     branches:
-      - master
-
+      - staging
 jobs:
-  build:
-
+  api:
+    name: Build and Deploy Api
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v1
-    - name: Build
-      run: |
-        npm install
-        npm run build
-    - name: Firebase Deploy
-      run: |
-        sudo npm install -g firebase-tools
-        firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
+    - name: Check out code
+      uses: actions/checkout@master
+    - name: Deploy to Firebase
+      uses: FirebaseExtended/action-hosting-deploy@v0
+      with:
+        target: staging
+        repoToken: "${{ secrets.TOKEN }}"
+        firebaseServiceAccount: "${{secrets.FIREBASE_TOKEN}}"
+        channelId: "live"
+        projectId: staging-59130
+#         FIREBASE_PROJECT_PATH: public
+#       uses: w9jds/firebase-action@master
+#       with:
+#         args: deploy --only hosting
+#       env:
+#         FIREBASE_TOKEN: ${{secrets.FIREBASE_TOKEN}}
+#         FIREBASE_PROJECT_PATH: public
