@@ -11,9 +11,16 @@ jobs:
     - name: Check out code
       uses: actions/checkout@master
     - name: Deploy to Firebase
-      uses: w9jds/firebase-action@master
+    - uses: FirebaseExtended/action-hosting-deploy@v0
       with:
-        args: deploy --only hosting
-      env:
-        FIREBASE_TOKEN: ${{secrets.FIREBASE_TOKEN}}
-        FIREBASE_PROJECT_PATH: public
+        target: production
+        repoToken: "${{ secrets.TOKEN }}"
+        firebaseServiceAccount: "${{secrets.FIREBASE_TOKEN}}"
+        channelId: "live"
+        projectId: devenv-9a031
+#       uses: w9jds/firebase-action@master
+#       with:
+#         args: deploy --only hosting
+#       env:
+#         FIREBASE_TOKEN: ${{secrets.FIREBASE_TOKEN}}
+#         FIREBASE_PROJECT_PATH: public
