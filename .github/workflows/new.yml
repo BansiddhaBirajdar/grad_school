@@ -14,7 +14,10 @@ jobs:
     #   uses: lowply/build-hugo@v0.68.3
     - name: Deploy to Firebase
       uses: w9jds/firebase-action@master
+      with:
+        args: deploy --only hosting
       env:
+
         FIREBASE_TOKEN: ${{secrets.FIREBASE_TOKEN}}
         FIREBASE_PROJECT: name-of-the-project
         FIREBASE_PROJECT_PATH: public
