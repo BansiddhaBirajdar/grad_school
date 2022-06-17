@@ -11,7 +11,7 @@
         "devenv": [
           "devenv-9a031"
         ],
-        "staging": [
+        "stag": [
           "staging-59130"
         ]
       }

@@ -10,16 +10,16 @@ jobs:
     steps:
     - name: Check out code
       uses: actions/checkout@master
-    # - name: Apply target
-    #   uses: w9jds/firebase-action@master
-    #   with:
-    #     args: target:apply hosting staging
-    #   env:
-    #     FIREBASE_TOKEN: ${{secrets.FIREBASE_TOKEN}}
+    - name: Apply target
+      uses: w9jds/firebase-action@master
+      with:
+        args: target:apply hosting stag stag
+      env:
+        FIREBASE_TOKEN: ${{secrets.FIREBASE_TOKEN}}
     - name: Deploy to Firebase
       uses: w9jds/firebase-action@master
       with:
-        args: deploy --only hosting:staging
+        args: deploy --only hosting:stag
       env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
         FIREBASE_PROJECT_PATH: public
