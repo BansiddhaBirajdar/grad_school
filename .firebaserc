@@ -1,6 +1,6 @@
 {
   "projects": {
-    "default": "staging-59130"
+    "default": "fir-785b7"
   },
   "targets":{
     "fir-785b7":{
@@ -11,7 +11,7 @@
         "devenv": [
           "devenv-9a031"
         ],
-        "main": [
+        "staging": [
           "staging-59130"
         ]
       }
