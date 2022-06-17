@@ -1,6 +1,6 @@
 {
   "projects": {
-    "default": "fir-785b7"
+    "default": "staging-59130"
   },
   "targets":{
     "fir-785b7":{
