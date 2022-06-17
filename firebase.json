@@ -1,23 +1,13 @@
 {
   "hosting": [
-    {
-      "target": "production",
-      "public": "public",
-      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
-      
-    },
+    
     {
       "target": "devenv",
       "public": "public",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
      
-    },
-    {
-      "target": "stag",
-      "public": "public",
-      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
-      
     }
+    
   ],
   "functions": {
     "predeploy": [
