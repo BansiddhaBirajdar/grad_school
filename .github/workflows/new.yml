@@ -13,5 +13,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run:|
-			echo "${{ secrets.GITHUB_TOKEN }}"
+      - name: Run a multi-line script
+      - run: ${{ secrets.GITHUB_TOKEN }}
