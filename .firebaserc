@@ -2,8 +2,8 @@
   "projects": {
     "default": "fir-785b7"
   },
-  "targets":{
-    "fir-785b7":{
+  "targets": {
+    "fir-785b7": {
       "hosting": {
         "production": [
           "master-73998"
@@ -11,7 +11,7 @@
         "devenv": [
           "devenv-9a031"
         ],
-        "staging": [
+        "stag": [
           "staging-59130"
         ]
       }

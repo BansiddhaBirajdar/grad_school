@@ -13,7 +13,7 @@
      
     },
     {
-      "target": "staging",
+      "target": "stag",
       "public": "public",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
       
