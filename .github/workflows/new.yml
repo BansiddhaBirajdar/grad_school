@@ -1,0 +1,27 @@
+name: Build and Deploy Api
+on:
+  push:
+    branches:
+      - main
+jobs:
+  api:
+    name: Build and Deploy Api
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@master
+    - name: Deploy to Firebase
+      uses: FirebaseExtended/action-hosting-deploy@v0
+      with:
+        target: production
+        repoToken: "${{ secrets.TOKEN }}"
+        firebaseServiceAccount: "${{secrets.FIREBASE_TOKEN}}"
+        channelId: "live"
+        projectId: devenv-9a031
+#         FIREBASE_PROJECT_PATH: public
+#       uses: w9jds/firebase-action@master
+#       with:
+#         args: deploy --only hosting
+#       env:
+#         FIREBASE_TOKEN: ${{secrets.FIREBASE_TOKEN}}
+#         FIREBASE_PROJECT_PATH: public
