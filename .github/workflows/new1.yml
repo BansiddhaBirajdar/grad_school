@@ -20,5 +20,5 @@ jobs:
       uses: lowply/deploy-firebase@v0.0.5
       env:
         FIREBASE_TOKEN: ${{secrets.FIREBASE_TOKEN}}
-        TARGET_BRANCH: main
-        TARGET_NAME: production 
+        FIREBASE_PROJECT: "fir-785b7"
+        TARGET_BRANCH: main 
