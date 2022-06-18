@@ -12,7 +12,8 @@ jobs:
       uses: actions/checkout@master
 #     - name: Build Hugo
 #       uses: lowply/build-hugo@v0.68.3
-    - uses: actions/setup-node@v3
+    - name: nodejs setup
+      uses: actions/setup-node@v3
       with:
         node-version: 14
     - name: Deploy to Firebase
