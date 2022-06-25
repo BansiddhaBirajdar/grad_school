@@ -6,13 +6,13 @@
     "fir-785b7": {
       "hosting": {
         "production": [
-          "master-73998"
+          "poc-productionn"
         ],
         "devenv": [
-          "devenv-9a031"
+          "poc-dev"
         ],
         "staging": [
-          "poc-productionn"
+          "poc-stg"
         ]
       }
     }
