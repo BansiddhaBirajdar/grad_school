@@ -5,15 +5,14 @@ on:
     - staging
     - production
     - devenv
+    
 jobs:
-  main:
-    name: Build and Deploy
+  build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Check out code
-      - uses: actions/checkout@master
-      
-    - uses: FirebaseExtended/action-hosting-deploy@v0
+      - name: Check out code
+        uses: actions/checkout@master
+      - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_TOKEN }}'
