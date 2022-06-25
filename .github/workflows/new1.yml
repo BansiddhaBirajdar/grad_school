@@ -24,3 +24,4 @@ jobs:
         FIREBASE_TOKEN: ${{secrets.FIREBASE_TOKEN}}
         FIREBASE_PROJECT: "fir-785b7"
         TARGET_NAME: ${GITHUB_REF#refs/heads/}
+        channelId: live
