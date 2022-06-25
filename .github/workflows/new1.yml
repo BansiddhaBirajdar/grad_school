@@ -23,5 +23,4 @@ jobs:
       env:
         FIREBASE_TOKEN: ${{secrets.FIREBASE_TOKEN}}
         FIREBASE_PROJECT: "fir-785b7"
-        TARGET_BRANCH: staging
         TARGET_NAME: ${GITHUB_REF#refs/heads/}
