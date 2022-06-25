@@ -2,7 +2,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-    - main
+    - staging
 jobs:
   main:
     name: Build and Deploy
@@ -21,5 +21,5 @@ jobs:
       env:
         FIREBASE_TOKEN: ${{secrets.FIREBASE_TOKEN}}
         FIREBASE_PROJECT: "fir-785b7"
-        TARGET_BRANCH: main
-        TARGET_NAME: stag
+        TARGET_BRANCH: staging
+        TARGET_NAME: staging

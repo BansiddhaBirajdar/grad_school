@@ -2,7 +2,7 @@ name: Build and Deploy Api
 on:
   push:
     branches:
-      - staging
+      - main
 jobs:
   api:
     name: Build and Deploy Api

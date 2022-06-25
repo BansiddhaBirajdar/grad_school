@@ -11,8 +11,8 @@
         "devenv": [
           "devenv-9a031"
         ],
-        "stag": [
-          "staging-59130"
+        "staging": [
+          "poc-productionn"
         ]
       }
     }
